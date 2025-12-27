@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Kabwere Furnitures</title>
+  <meta name="description" content="Contact Kabwere Furnitures for custom wardrobes, beds, kitchen units, TV stands and quotations. Call or WhatsApp us today in Lilongwe."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets-css-main.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+<a href="index.html" class="logo-link">
+  <div class="logo">
+    <img src="logo.png" alt="Kabwere Furnitures">
+  </div>
+</a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Our Work</a></li>
+          <li><a href="sofas.html">Custom Collection</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="btn-contact">Get Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="container section-padding" style="text-align:center;">
+  <h1>Get in Touch</h1>
+  <p style="font-size:1.3rem; margin:2rem 0 4rem; max-width:680px; margin-left:auto; margin-right:auto;">
+    Ready to discuss your dream furniture? We're just one call or message away in Lilongwe.
+  </p>
+
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2.5rem; margin-bottom:5rem;">
+    <a href="tel:+265985500954" class="btn btn-primary" style="font-size:1.5rem; padding:1.4rem 3.5rem; min-width:280px;">
+      Call Now: 0985 500 952
+    </a>
+
+    <a href="https://wa.me/265985500954?text=Hello%20Kabwere%20Furnitures%2C%20I%20would%20like%20to%20discuss%20my%20furniture%20project" class="btn btn-whatsapp" style="font-size:1.5rem; padding:1.4rem 3.5rem; min-width:280px;">
+      WhatsApp Us
+    </a>
+  </div>
+
+  <div style="margin-top:4rem;">
+    <h3>Our Location</h3>
+    <p style="font-size:1.3rem; margin:1.5rem 0; line-height:1.6;">
+      Area 44 Tambalale (pa Alinga)<br>
+      Lilongwe, Malawi
+    </p>
+    <!-- Optional Google Maps iframe – add when you have exact coordinates -->
+  
+  <!-- Google Maps Embed for Tambalale / Area 44 -->
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3836.5!2d33.824!3d-14.006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19202d3749710083%3A0xaae87283ac7742bd!2sTambalale%2C%20Lilongwe!5e0!3m2!1sen!2smw!4v1735000000000!5m2!1sen!2smw" 
+    width="100%" 
+    height="450" 
+    style="border:0; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); max-width:900px;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="450" style="border:0; margin-top:2rem; border-radius:8px; max-width:800px;" allowfullscreen="" loading="lazy"></iframe> -->
+  </div>
+</main>
+
+<!-- Contact Form Section -->
+<section class="section-padding" style="background: rgba(74,112,67,0.05);">
+  <div class="container">
+    <h2 style="text-align:center;">Get Your Free Quote Today</h2>
+    <p style="text-align:center; max-width:680px; margin:1rem auto 3rem; font-size:1.15rem; color:var(--gray);">
+      Tell us about your project — we’ll reply within the same day!
+    </p>
+
+    <form id="quote-form" class="quote-form" style="max-width:680px; margin:0 auto;">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required placeholder="e.g. Chifundo Mwale">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone / WhatsApp</label>
+        <input type="tel" id="phone" name="phone" required placeholder="0985 500 952">
+      </div>
+
+      <div class="form-group">
+        <label for="project">What are you looking for?</label>
+        <textarea id="project" name="project" rows="5" placeholder="E.g. Custom wardrobe 3m wide, queen size bed with storage, kitchen units..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%; font-size:1.3rem; padding:18px;">
+        Send Enquiry → WhatsApp
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- WhatsApp Form Script -->
+<script>
+  document.getElementById('quote-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const project = document.getElementById('project').value.trim();
+    
+    if (!name || !phone || !project) {
+      alert('Please fill in all fields');
+      return;
+    }
+    
+    const message = `Hello Kabwere Furnitures!\n\nName: ${name}\nPhone/WhatsApp: ${phone}\nProject: ${project}\n\nLooking forward to your reply!`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/265985500954?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
+    this.reset();
+  });
+</script>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Kabwere Furnitures</h4>
+        <p>Quality custom furniture crafted with care in Area 44 Tambalale (pa Alinga), Lilongwe</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><strong>Phone/WhatsApp:</strong> <a href="tel:+265985500952">0985 500 952</a></p>
+        <p><strong>Email:</strong> <a href="mailto:kaundathumbiko@gmail.com">kaundathumbiko@gmail.com</a></p>
+        <p><strong>Location:</strong> Area 44 Tambalale (pa Alinga), Lilongwe</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><a href="sofas.html">Custom Collection</a></li>
+          <li><a href="work.html">Our Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:3rem; opacity:0.8; font-size:0.95rem;">
+      © 2025 Kabwere Furnitures. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile Menu Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.main-nav');
+    if (!hamburger || !nav) return;
+
+    hamburger.addEventListener('click', function () {
+      const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !isExpanded);
+      nav.classList.toggle('active');
+      document.body.style.overflow = isExpanded ? '' : 'hidden';
+    });
+
+    document.querySelectorAll('.nav-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    document.addEventListener('click', e => {
+      if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

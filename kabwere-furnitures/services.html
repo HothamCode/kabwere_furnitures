@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | Kabwere Furnitures</title>
+  <meta name="description" content="Custom wardrobes any size, beds any size, kitchen units, TV stands, and any design you bring – handcrafted in Lilongwe, Area 44 Tambalale (pa Alinga). We come to you or you pick up."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets-css-main.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+  <a href="index.html" class="logo-link">
+  <div class="logo">
+    <img src="logo.png" alt="Kabwere Furnitures">
+  </div>
+</a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Our Work</a></li>
+          <li><a href="sofas.html">Custom Collection</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="btn-contact">Get Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="container section-padding">
+  <h1 style="text-align:center;">Our Services</h1>
+  <p style="text-align:center; max-width:760px; margin:1.5rem auto 3rem; font-size:1.2rem; color:var(--gray);">
+    We specialize in custom furniture of any design and size. Bring your idea – we make it exactly as you want!<br>
+    We come to your place (travel fee applies) or you pick up from our workshop in Area 44 Tambalale (pa Alinga), Lilongwe.
+  </p>
+
+  <div class="card-grid">
+    <div class="card">
+      <img src="wardrobe services.webp" alt="Custom Wardrobes Any Size" loading="lazy">
+      <div class="card-content">
+        <h3>Custom Wardrobes – Any Size</h3>
+        <p>Sliding, hinged, built-in, mirror doors – perfectly fitted to your space and style.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Beds.jpg" alt="Custom Beds Any Size" loading="lazy">
+      <div class="card-content">
+        <h3>Custom Beds – Any Size</h3>
+        <p>Single to king size, with storage, canopy, or modern design – made for your comfort.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Kitchen.webp" alt="Custom Kitchen Units" loading="lazy">
+      <div class="card-content">
+        <h3>Kitchen Units & Cabinets</h3>
+        <p>Modern kitchens, islands, cabinets – functional, beautiful, and built to last.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="tv stand.webp" alt="Custom TV Stands" loading="lazy">
+      <div class="card-content">
+        <h3>Custom TV Stands & Units</h3>
+        <p>Floating, wall-mounted, or full entertainment centers – designed for your space.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="office design.webp" alt="Any Custom Furniture Design" loading="lazy">
+      <div class="card-content">
+        <h3>Any Custom Design</h3>
+        <p>Sofas, tables, chairs, office furniture – bring your idea, we craft it perfectly.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:5rem;">
+    <a href="tel:+265985500952" class="btn btn-primary btn-lg">Call Now: 0985 500 952</a>
+    <a href="https://wa.me/265985500952?text=Hi%20Kabwere%20Furnitures%2C%20I%20want%20a%20free%20quote" class="btn btn-whatsapp btn-lg" style="margin-left:1rem;">
+      WhatsApp Quote
+    </a>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Kabwere Furnitures</h4>
+        <p>Quality custom furniture crafted with care in Area 44 Tambalale (pa Alinga), Lilongwe</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><strong>Phone/WhatsApp:</strong> <a href="tel:+265985500952">0985 500 952</a></p>
+        <p><strong>Email:</strong> <a href="mailto:kaundathumbiko@gmail.com">kaundathumbiko@gmail.com</a></p>
+        <p><strong>Location:</strong> Area 44 Tambalale (pa Alinga), Lilongwe</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><a href="sofas.html">Custom Collection</a></li>
+          <li><a href="work.html">Our Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:3rem; opacity:0.8; font-size:0.95rem;">
+      © 2025 Kabwere Furnitures. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile Menu Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.main-nav');
+    if (!hamburger || !nav) return;
+
+    hamburger.addEventListener('click', function () {
+      const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !isExpanded);
+      nav.classList.toggle('active');
+      document.body.style.overflow = isExpanded ? '' : 'hidden';
+    });
+
+    document.querySelectorAll('.nav-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    document.addEventListener('click', e => {
+      if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

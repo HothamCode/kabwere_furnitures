@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Kabwere Furnitures</title>
+  <meta name="description" content="Discover Kabwere Furnitures – your trusted partner for custom wardrobes, beds any size, kitchen units, TV stands and more in Lilongwe, Area 44 Tambalale (pa Alinga)."/>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets-css-main.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+     <a href="index.html" class="logo-link">
+  <div class="logo">
+    <img src="logo.png" alt="Kabwere Furnitures">
+  </div>
+</a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Our Work</a></li>
+          <li><a href="sofas.html">Custom Collection</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="btn-contact">Get Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="container section-padding">
+  <h1 style="text-align:center;">About Kabwere Furnitures</h1>
+
+  <div style="max-width:880px; margin:4rem auto 0; text-align:center;">
+    <p style="font-size:1.25rem; line-height:1.8; margin-bottom:2.5rem;">
+      Kabwere Furnitures is your trusted local expert in custom furniture in Lilongwe.<br>
+      We specialize in creating high-quality pieces that fit your space, style, and budget – built to last.
+    </p>
+
+    <p>From our workshop in Area 44 Tambalale (pa Alinga), we craft wardrobes any size, beds any size, kitchen units, TV stands, and any custom design you bring to life.</p>
+
+    <h3 style="margin:4rem 0 1.5rem;">What Makes Us Different</h3>
+    <ul style="font-size:1.1rem; line-height:2; list-style:none; padding-left:0; max-width:700px; margin:0 auto; text-align:left;">
+      <li>→ We make furniture to your exact design – no limits on size or style</li>
+      <li>→ Premium materials and skilled craftsmanship for pieces that endure</li>
+      <li>→ Flexible service: We come to your location (travel fee applies) or you pick up</li>
+      <li>→ Personalized attention – from idea to finished product</li>
+      <li>→ Proudly serving Lilongwe with quality you can trust</li>
+    </ul>
+
+    <div style="margin-top:5rem; text-align:center;">
+      <img src="Team-Thumbiko.webp" alt="Our workshop team at Kabwere Furnitures" loading="lazy" style="max-width:100%; border-radius:8px; box-shadow:var(--shadow);">
+      <p style="margin-top:1rem; font-style:italic; color:var(--gray);">Our dedicated team turning ideas into timeless furniture</p>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Kabwere Furnitures</h4>
+        <p>Quality custom furniture crafted with care in Area 44 Tambalale (pa Alinga), Lilongwe</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><strong>Phone/WhatsApp:</strong> <a href="tel:+265985500954">0985 500 952</a></p>
+        <p><strong>Email:</strong> <a href="mailto:kaundathumbiko@gmail.com">kaundathumbiko@gmail.com</a></p>
+        <p><strong>Location:</strong> Area 44 Tambalale (pa Alinga), Lilongwe</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><a href="sofas.html">Custom Collection</a></li>
+          <li><a href="work.html">Our Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:3rem; opacity:0.8; font-size:0.95rem;">
+      © 2025 Kabwere Furnitures. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile Menu Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.main-nav');
+    if (!hamburger || !nav) return;
+
+    hamburger.addEventListener('click', function () {
+      const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !isExpanded);
+      nav.classList.toggle('active');
+      document.body.style.overflow = isExpanded ? '' : 'hidden';
+    });
+
+    document.querySelectorAll('.nav-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    document.addEventListener('click', e => {
+      if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
