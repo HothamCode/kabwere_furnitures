@@ -519,3 +519,88 @@ iframe {
 }
 .hero-content { position: relative; z-index: 2; }
 
+/* Reduced Font Sizes – Professional & Balanced */
+body {
+  font-size: 1rem;               /* Base font slightly smaller (was ~1.1rem implicit) */
+  line-height: 1.65;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 7vw, 4.5rem); /* Hero title reduced on large screens */
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 2.8rem);   /* Section headings smaller */
+}
+
+h3 {
+  font-size: 1.6rem;                     /* Card titles reduced */
+  margin-bottom: 0.8rem;
+}
+
+p, .lead {
+  font-size: clamp(1rem, 2.5vw, 1.15rem); /* Body & lead text reduced but readable */
+  line-height: 1.7;
+}
+
+/* Hero specific – prevent cutoff */
+.hero-content {
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero .lead {
+  font-size: clamp(1.1rem, 3vw, 1.4rem);  /* Smaller lead text on desktop */
+  margin-bottom: 2rem;
+}
+
+/* Buttons – slightly smaller but still prominent */
+.btn {
+  padding: 12px 28px;
+  font-size: 1.1rem;
+}
+
+.btn-lg {
+  padding: 14px 32px;
+  font-size: 1.25rem;
+}
+
+/* Card content */
+.card-content p {
+  font-size: 1rem;
+}
+
+/* Trust bar & footer */
+.trust-items > div {
+  font-size: 1rem;
+}
+
+footer p, footer li {
+  font-size: 0.95rem;
+}
+
+/* Mobile fine-tuning */
+@media (max-width: 768px) {
+  h1 { font-size: clamp(2.4rem, 6vw, 3.2rem); }
+  h2 { font-size: 2rem; }
+  .hero .lead { font-size: 1.15rem; }
+  .btn { padding: 12px 24px; font-size: 1.1rem; }
+}
+
+/* Social Links Styling */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.15);
+}
